@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit
+fi
+
 adduser --disabled-password --system --home /var/lib/deluge --gecos "Deluge service" --group deluge
 touch /var/log/deluged.log
 touch /var/log/deluge-web.log
