@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit
+fi
+
 apt update && apt upgrade -y
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
