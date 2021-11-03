@@ -10,8 +10,7 @@ touch /var/log/deluged.log
 touch /var/log/deluge-web.log
 chown deluge:deluge /var/log/deluge*
 apt-get update
-apt-get install deluged
-apt-get install deluge-web
+apt-get install deluged -y && apt-get install deluge-web -y
 
 echo "[Unit]
 Description=Deluge Bittorrent Client Daemon
