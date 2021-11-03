@@ -13,4 +13,4 @@ sudo mkdir -p /opt/plexmedia/{movies,series}
 sudo chown -R plex: /opt/plexmedia
 systemctl start plexmediaserver
 
-echo "Plex Server now run at : http://localhost:32400
+echo "Plex Server now run at : http://localhost:32400"
