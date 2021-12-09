@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if (( $EUID != 0 )); then
+    echo "Please run as root"
+    exit
+fi
+
 apt-get remove docker docker-engine docker.io containerd runc
 
 sudo apt-get update
