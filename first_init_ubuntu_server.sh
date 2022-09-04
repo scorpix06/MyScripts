@@ -1,7 +1,7 @@
 #!/bin/bash
 
-timezone = Europe/Paris
-ssh_gh_hostname = scorpix06
+timezone=Europe/Paris
+ssh_gh_hostname=scorpix06
 
 if (( $EUID != 0 )); then
     echo "Please run as root"
